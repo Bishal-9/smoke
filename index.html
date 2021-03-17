@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Smoke</title>
+</head>
+<body>
+    <section>
+        <p class="text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac mollis felis. Nullam ut mauris eu nisi finibus feugiat nec eu ipsum. Etiam ut ante pharetra, mattis massa quis, tincidunt mi. Quisque magna mi, mattis ut molestie ac, ornare ac orci. In eget sollicitudin justo. Aenean cursus lobortis posuere. Mauris sollicitudin diam non quam aliquam malesuada. Fusce sit amet ultricies velit, non hendrerit nibh. Pellentesque non nibh eu sapien sollicitudin fringilla vitae nec metus. Nullam sed ex et ipsum imperdiet accumsan vel sed ante. Vestibulum ut luctus lorem, in efficitur felis. Praesent felis neque, gravida et magna dapibus, egestas scelerisque quam. Duis sed est in felis ultrices porttitor in at urna. Vestibulum eget diam vitae elit consectetur tincidunt.
+        </p>
+    </section>
+
+    <script>
+        // Splitting text into lindividual letters
+        const text = document.querySelector('.text');
+        text.innerHTML = text.textContent.replace(/\S/g, "<span>$&</span>");
+
+        // Adding active class on hovered letter
+        const letters = document.querySelectorAll('span');
+        for (let i = 0; i < letters.length; i++) {
+            letters[i].addEventListener("mouseover", function() {
+                letters[i].classList.add('active');
+            });
+        }
+    </script>
+</body>
+</html>
